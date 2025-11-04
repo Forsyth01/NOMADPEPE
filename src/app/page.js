@@ -12,6 +12,8 @@ import Roadmap from './components/Roadmap';
 import Community from './components/Community';
 import Footer from './components/Footer';
 import Marquee from './components/MarqueeSection';
+import FaqSection from './components/FaqSection';
+import HowToBuy from './components/HowToBuy';
 
 export default function Home() {
   useEffect(() => {
@@ -44,10 +46,12 @@ export default function Home() {
       <Navigation />
       <Hero />
       <Marquee />
+      <HowToBuy/>
+      <FaqSection/>
       {/* <ParallaxSection /> */}
-      <Tokenomics />
-      <Roadmap />
-      <Community />
+      {/* <Tokenomics /> */}
+      {/* <Roadmap /> */}
+      {/* <Community /> */}
       <Footer />
     </main>
   );
