@@ -50,7 +50,7 @@ export default function Home() {
       <Hero />
       <Marquee />
       <HowToBuy/>
-      <BuyUsingJupiter/>
+      {/* <BuyUsingJupiter/> */}
       <Nomadnomics />
       <ExpeditionSection/>
       <FaqSection/>

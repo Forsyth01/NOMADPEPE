@@ -29,17 +29,19 @@ export default function Hero() {
     <section
       ref={heroRef}
       className="min-h-screen relative overflow-hidden bg-[#0E242217]"
+
     >
+      
       <div className="z-10 items-center w-[90%] m-auto">
         <div className="w-full text-center">
           {/* Background Image - Responsive positioning */}
-          <div className="absolute right-0 top-0 w-full lg:w-auto">
+          {/* <div className="absolute right-0 top-0 w-full lg:w-auto">
             <img
               src="/assets/herobg.png"
               alt="Hero Background"
               className="w-full h-[100vh] max-w-[400px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[800px] 2xl:max-w-[948px] opacity-40 lg:opacity-60 object-cover mx-auto lg:mx-0"
             />
-          </div>
+          </div> */}
           
           <div className="min-h-screen flex flex-col justify-center">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 lg:gap-0">

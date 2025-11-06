@@ -4,11 +4,19 @@ import SocialIcons from "./SocialIcons";
 export default function NomadBadge() {
   return (
     <div
-      className="relative flex flex-col items-center justify-center bg-[#E5EED2] p-8 bg-contain bg-center"
-      style={{ backgroundImage: "url('/nomadbadge_bg.png')" }}
+      className=" relative flex flex-col items-center justify-center bg-[#E5EED2] p-8 bg-contain"
+      style={{
+        backgroundImage: "url('/nomadbadge_bg.png')",
+        backgroundSize: "cover", // 
+        backgroundPosition: "center", 
+        backgroundRepeat: "no-repeat", // ← no tiling
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
     >
       {/* Overlay to improve visibility */}
-      <div className="absolute inset-0 bg-[#E5EED2]/50"></div>
+      <div className="absolute inset-0 bg-[#E5EED2]/40"></div>
 
       <div className="relative z-10 flex flex-col items-center">
         {/* Badge Image Animation */}
@@ -21,7 +29,7 @@ export default function NomadBadge() {
           <img
             src="/nomadbadge.png"
             alt="Nomad Badge"
-            className="h-[260px] sm:h-[320px] md:h-[380px] object-contain"
+            className="h-120 object-cover"
           />
         </motion.div>
 
@@ -31,20 +39,14 @@ export default function NomadBadge() {
         </div>
 
         {/* CTA Button */}
-        <div className="rotate-[-2deg] flex justify-center mt-6">
+        <div className=" flex justify-center mt-4">
           <motion.a
             href="#"
             whileHover={{ scale: 1.05, y: -1, rotate: 0 }}
             whileTap={{ scale: 0.95 }}
-            className="relative inline-block font-bold text-[#0F1C0F] text-sm sm:text-lg uppercase tracking-wide"
+            className=""
           >
-            {/* Shadow Layer */}
-            <span className="absolute inset-0 bg-white rounded-md translate-x-[2px] translate-y-[3px] sm:translate-x-[3px] sm:translate-y-[5px] md:translate-x-[4px] md:translate-y-[7px]" />
-
-            {/* Button Text */}
-            <p className="relative text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[35px] bg-[#99CC33] rounded-md border border-[#0F1C0F] px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 inline-block font-normal">
-              BUY $NOMAD
-            </p>
+          <img src="/buynomadbtn.png" alt="" className="h-16" />
           </motion.a>
         </div>
       </div>

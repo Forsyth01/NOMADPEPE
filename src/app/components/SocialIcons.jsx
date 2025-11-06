@@ -11,7 +11,7 @@ export default function SocialIcons() {
   ];
 
   return (
-    <div className="flex items-center justify-center space-x-6 py-6">
+    <div className="flex items-center justify-center space-x-6 py-4">
       {icons.map(({ id, icon: Icon, link, rotate }) => (
         <motion.a
           key={id}

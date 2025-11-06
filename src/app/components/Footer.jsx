@@ -2,9 +2,9 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-[#02221D] text-center py-12 px-4">
+    <footer className="bg-[#02221D] text-center py-12 px-4 text-xl">
       {/* Top Navigation Links */}
-      <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 mb-6  text-white text-sm md:text-base">
+      <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 mb-6  text-white ">
         <a href="#about" className="hover:text-[#99CC33] transition-colors duration-200">
           ABOUT $NOMAD
         </a>
@@ -23,7 +23,7 @@ export default function Footer() {
       </div>
 
       {/* Disclaimer */}
-      <p className="max-w-3xl mx-auto text-white text-sm md:text-base leading-relaxed mb-6">
+      <p className="max-w-3xl mx-auto  text-white mb-6">
         DISCLAIMER: $NOMAD is a meme coin created for fun with absolutely no intrinsic value or any
         expectation of financial return. The token for entertainment purposes only and we take zero
         responsibility for the value of this token. $NOMAD is inspired by NOMAD to be the king of
@@ -31,8 +31,8 @@ export default function Footer() {
       </p>
 
       {/* Copyright */}
-      <p className="text-[#9fd235] text-sm md:text-base">
-        2024 NOMAD PEPE. All right reserved.
+      <p className="text-[#9fd235]">
+        2025 NOMAD PEPE. All right reserved.
       </p>
     </footer>
   );

@@ -33,17 +33,17 @@ export default function FaqSection() {
         {/* Main FAQ Container */}
         <div className="relative bg-[#B1BE97] rounded-md border border-[#0F1C0F] p-6 md:p-8 space-y-6">
           {faqs.map((faq) => (
-            <div key={faq.id} className="border-b border-[#0F1C0F]/60 pb-3">
+            <div key={faq.id} className="border-b-2  border-[#273628]/50 pb-3">
               <button
                 onClick={() => toggle(faq.id)}
-                className="w-full flex items-center justify-between text-left  text-lg md:text-xl tracking-wide lucky"
+                className="w-full flex items-center justify-between text-left  text-lg md:text-2xl text-[#273628] tracking-wide lucky"
               >
                 {faq.question}
                 <span className="relative inline-block">
                   {/* Shadow */}
                   <span className="absolute inset-0 bg-[#6B8E23] rounded-sm translate-x-[2px] translate-y-[2px]"></span>
                   {/* Icon Box */}
-                  <span className="relative border border-[#0F1C0F] opacity-80 bg-[#0E2422] rounded-sm p-1.5 flex items-center justify-center">
+                  <span className="relative border border-[#0F1C0F] opacity-80 bg-[#0E2422] rounded-sm p-3 flex items-center justify-center">
                     {openId === faq.id ? (
                       <Minus size={16} className="text-white" />
                     ) : (

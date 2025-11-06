@@ -82,20 +82,6 @@ export default function JupiterSwap() {
             </div>
           </div>
 
-          {/* Swap Arrow */}
-          <div className="flex justify-center -my-1 relative z-10">
-            <motion.button
-              whileHover={{ scale: 1.1, rotate: 180 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ duration: 0.3 }}
-              className="bg-[#595C59] border-4 border-[#3a4a3a] rounded-full p-2 hover:border-[#4a5a4a] transition-colors"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-gray-400">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
-              </svg>
-            </motion.button>
-          </div>
-
           {/* To Input */}
           <div className="bg-[#383C38] rounded-2xl p-4 mb-6">
             <div className="flex items-center justify-between mb-2">

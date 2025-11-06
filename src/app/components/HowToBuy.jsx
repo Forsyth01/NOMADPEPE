@@ -1,5 +1,5 @@
-'use client';
-import { motion } from 'framer-motion';
+"use client";
+import { motion } from "framer-motion";
 
 export default function HowToBuy() {
   const steps = [
@@ -34,18 +34,19 @@ export default function HowToBuy() {
   ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-[#5a7a3a] via-[#6b8a4a] to-[#4a6a2a] relative overflow-hidden py-12 md:py-20 px-4 md:px-6">
-      {/* Decorative wave pattern */}
-      <div className="absolute bottom-0 left-0 w-full opacity-20">
-        <svg viewBox="0 0 1440 100" className="w-full">
-          <path
-            d="M0,50 Q360,20 720,50 T1440,50 L1440,100 L0,100 Z"
-            fill="#3a5a2a"
-          />
-        </svg>
-      </div>
-
-      <div className="container mx-auto max-w-7xl relative z-10">
+    <section
+      className="min-h-screen bg-[#4f7a36] relative overflow-hidden py-12 md:py-20 px-4 md:px-6"
+      style={{
+         background: `linear-gradient(rgba(69,102,49,0.5), rgba(69,102,49,0.8)), url('/BG htb.png') center/cover no-repeat`,
+        backgroundSize: "cover", //
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat", // ← no tiling
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <div className="relative z-10">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-12">
           {/* Left side - Pepe Character */}
           <motion.div
@@ -54,9 +55,9 @@ export default function HowToBuy() {
             transition={{ duration: 0.8 }}
             className="w-full lg:w-auto lg:sticky lg:top-24 flex justify-center lg:justify-start"
           >
-            <div className="relative w-64 md:w-80 lg:w-96">
+            <div className="relative w-64 md:w-80 lg:w-100">
               <div className="relative">
-                <div className="text-9xl">🐸</div>
+                <img src="/nomad_beach.png" alt="" className="absolute" />
               </div>
             </div>
           </motion.div>
@@ -69,24 +70,19 @@ export default function HowToBuy() {
             className="flex-1 w-full max-w-3xl mx-auto lg:mx-0"
           >
             <div className="relative">
-              {/* Clipboard clip */}
-              <div className="absolute -top-8 md:-top-12 left-1/2 transform -translate-x-1/2 z-20">
-                <div className="relative">
-                  {/* Left clip */}
-                  <div className="absolute left-0 w-12 h-16 md:w-16 md:h-20 bg-[#6b8a4a] rounded-b-lg border-4 border-[#5a7a3a]"></div>
-                  {/* Right clip */}
-                  <div className="absolute right-0 w-12 h-16 md:w-16 md:h-20 bg-[#6b8a4a] rounded-b-lg border-4 border-[#5a7a3a]"></div>
-                  {/* Tab */}
-                  <div className="relative mx-auto w-48 md:w-64 h-12 md:h-16 bg-[#7a9a5a] rounded-t-2xl border-4 border-[#5a7a3a] flex items-center justify-center">
-                    <h2 className="text-white text-xl md:text-2xl lg:text-3xl lucky uppercase tracking-tight">
-                      HOW TO BUY
-                    </h2>
-                  </div>
-                </div>
-              </div>
-
+              
               {/* Clipboard body */}
-              <div className="bg-[#1a2a1a] rounded-3xl pt-16 md:pt-20 pb-8 md:pb-12 px-6 md:px-10 lg:px-12 mt-8 md:mt-12 shadow-2xl">
+              <div
+                className=""
+                style={{
+                  backgroundImage: "url('/rec htb.png')",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat", // ← no tiling
+                  display: "flex",
+                  // alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <div className="space-y-6 md:space-y-8">
                   {steps.map((step, index) => (
                     <motion.div
@@ -131,19 +127,19 @@ export default function HowToBuy() {
             </div>
 
             {/* Tutorial Video Button */}
-            <motion.a
-              href="#"
-              whileHover={{ scale: 1.02, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1 }}
-              className="block w-full bg-[#E5EED2] hover:bg-[#D5DEC2] text-[#3a5a2a] text-center py-5 md:py-6 rounded-2xl lucky text-xl md:text-2xl lg:text-3xl uppercase tracking-tight mt-8 md:mt-12 transition-colors shadow-xl"
-            >
-              WATCH TUTORIAL VIDEO ON HOW TO BUY
-            </motion.a>
           </motion.div>
         </div>
+        <motion.a
+          href="#"
+          whileHover={{ scale: 1.02, y: -2 }}
+          whileTap={{ scale: 0.98 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1 }}
+          className=""
+        >
+          <img src="/Btn htb.png" alt="" className="h-20 m-auto mt-10 " />
+        </motion.a>
       </div>
     </section>
   );

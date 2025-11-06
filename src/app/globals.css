@@ -28,6 +28,10 @@ body {
   overflow-x: hidden;
 }
 
+.jockey {
+  font-family: 'Jockey One', sans-serif;
+}
+
 .gradient-text {
   background: linear-gradient(135deg, #00dc82 0%, #00c2ff 100%);
   -webkit-background-clip: text;
@@ -66,10 +70,10 @@ body {
   box-shadow: 0 0 30px rgba(0, 220, 130, 0.3);
 }
 
-.meme-font {
+/* .meme-font {
   font-family: 'Comic Neue', cursive;
   font-weight: 700;
-}
+} */
 
 @keyframes float {
 
@@ -104,3 +108,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #00c2ff, #00dc82);
 }
+
