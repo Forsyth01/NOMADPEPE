@@ -14,24 +14,32 @@ export default function Nomadnomics() {
   };
 
   return (
-    <section className="bg-[#0E2422] relative overflow-hidden py-8 px-4 md:px-6">
-      {/* Decorative cloud at top for mobile */}
-      <div className="lg:hidden absolute top-0 left-1/2 -translate-x-1/2 w-48 sm:w-56">
-        <img src="/cloud.png" alt="" className="w-full object-cover" />
+    <section className="bg-[#0E2422] relative overflow-hidden py-8 px-4 md:px-6 ">
+      {/* Decorative clouds for all screens */}
+      <div
+        className="absolute top-0 lg:right-0 right-20  
+                w-[200px] xs:w-[150px] sm:w-[180px] md:w-[220px] lg:w-[260px] xl:w-[300px] 2xl:w-[340px]"
+      >
+        <img
+          src="/cloud.png"
+          alt=""
+          className="relative right-4 sm:right-6 md:right-8 object-cover w-full"
+        />
       </div>
-
-      {/* Decorative clouds for desktop */}
-      <div className="hidden lg:block absolute top-0 right-0 w-[301.8545227050781px] xl:w-56">
-        <img src="/cloud.png" alt="" className="relative right-8 object-cover w-[301.8545227050781px] " />
-      </div>
-      <div className="hidden lg:block absolute bottom-0 right-0 w-40 xl:w-56">
-        <img src="/cloud2.png" alt="" className="relative right-10 object-cover" />
+      <div
+        className="hidden lg:flex absolute bottom-0 right-0 
+                w-[180px] xs:w-[130px] sm:w-[160px] md:w-[190px] lg:w-[220px] xl:w-[250px] 2xl:w-[280px]"
+      >
+        <img
+          src="/cloud2.png"
+          alt=""
+          className="relative right-6 sm:right-8 md:right-10 object-cover w-full"
+        />
       </div>
 
       <div className="container mx-auto max-w-7xl lucky h-full flex items-center">
         {/* Mobile Layout: Everything stacked vertically */}
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-12 w-full">
-          
           {/* Content Section - First on mobile, Second on desktop */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -40,14 +48,14 @@ export default function Nomadnomics() {
             className="flex-1 w-full lg:order-2"
           >
             {/* Title - Centered on mobile */}
-            <div className="mb-6 sm:mb-8 text-center lg:text-left mt-12 lg:mt-0">
-              <h1 className="text-[#e5eed2] text-3xl sm:text-4xl md:text-5xl uppercase tracking-wide">
+            <div className="mb-6 sm:mb-8 lg:text-left mt-14 lg:mt-0">
+              <h1 className="text-[#e5eed2] text-5xl sm:text-4xl md:text-5xl uppercase tracking-wide">
                 #NOMADNOMICS
               </h1>
             </div>
 
             {/* Total Supply */}
-            <div className="mb-4 sm:mb-5 text-center lg:text-left">
+            <div className="mb-4 sm:mb-5  lg:text-left">
               <h3 className="text-[#Acc578] text-sm sm:text-base md:text-lg mb-1 uppercase ">
                 TOTAL SUPPLY
               </h3>
@@ -57,25 +65,25 @@ export default function Nomadnomics() {
             </div>
 
             {/* Buy/Sell Tax */}
-            <div className="mb-6 sm:mb-8 flex items-center gap-2 justify-center lg:justify-start">
+            <div className="mb-6 sm:mb-8 flex  gap-2 lg:justify-start">
               <div className="w-5 h-5 sm:w-6 sm:h-6 bg-[#9fd235] rounded-full flex items-center justify-center flex-shrink-0">
                 <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-[#6b8d26] rounded-full"></div>
               </div>
-              <p className="text-[#e5eed2] text-base sm:text-lg md:text-xl ">
+              <p className="text-[#e5eed2] text-base text-left sm:text-lg md:text-xl ">
                 BUY/SELL TAX: 0%
               </p>
             </div>
 
             {/* Contract Address */}
             <div className="mb-6 sm:mb-8">
-              <h3 className="text-[#ffffff] text-sm sm:text-base md:text-lg mb-3 uppercase tracking-wide font-semibold text-center lg:text-left">
+              <h3 className="text-[#ffffff] text-sm sm:text-base md:text-lg mb-3 uppercase tracking-wide lg:text-left">
                 CONTRACT ADDRESS
               </h3>
 
               {/* Contract box */}
-              <div className="w-full max-w-md lg:max-w-2xl mx-auto lg:mx-0">
-                <div className="bg-[#1a3a35]/50 border-2 border-[#ACC578] rounded-xl p-3 sm:p-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-                  <p className="text-[#e5eed2] text-xs sm:text-sm md:text-base break-all text-center sm:text-left flex-1">
+              <div className="w-full max-w-md lg:max-w-2xl mx-auto lg:mx-0 ">
+                <div className="bg-[#1a3a35]/50 border-2 border-[#ACC578] rounded-xl p-3 sm:p-4 flex flex-row sm:flex-row items-center justify-between gap-3 w-full">
+                  <p className="text-[#e5eed2] text-xs sm:text-sm md:text-base break-all  sm:text-left flex-1">
                     {contractAddress}
                   </p>
 
@@ -90,7 +98,9 @@ export default function Nomadnomics() {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={handleCopy}
-                      aria-label={copied ? "Copied to clipboard" : "Copy contract address"}
+                      aria-label={
+                        copied ? "Copied to clipboard" : "Copy contract address"
+                      }
                       className="relative bg-[#6b8d26] hover:bg-[#7ca933] text-[#e5eed2] px-4 py-2 rounded-md text-sm uppercase tracking-wide flex items-center gap-2 transition-colors"
                     >
                       {copied ? (
@@ -137,9 +147,9 @@ export default function Nomadnomics() {
             <div className="relative">
               {/* Circular border with image */}
               <div className="relative rounded-full overflow-hidden">
-                <img 
-                  src="/nomadnomics.png" 
-                  alt="Nomad Pepe" 
+                <img
+                  src="/nomadnomics.png"
+                  alt="Nomad Pepe"
                   className="w-full h-auto"
                 />
               </div>
