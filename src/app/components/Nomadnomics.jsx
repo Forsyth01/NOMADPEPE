@@ -83,7 +83,7 @@ export default function Nomadnomics() {
               {/* Contract box */}
               <div className="w-full max-w-md lg:max-w-2xl mx-auto lg:mx-0 ">
                 <div className="bg-[#1a3a35]/50 border-2 border-[#ACC578] rounded-xl p-3 sm:p-4 flex flex-row sm:flex-row items-center justify-between gap-3 w-full">
-                  <p className="text-[#e5eed2] text-xs sm:text-sm md:text-base break-all  sm:text-left flex-1">
+                  <p className="text-[#e5eed2] text-xl sm:text-sm md:text-xl break-all  sm:text-left flex-1">
                     {contractAddress}
                   </p>
 

@@ -66,9 +66,9 @@ export default function Navigation() {
               whileTap={{ scale: 0.95 }}
             >
               {isOpen ? (
-                <X size={20} className="text-[#0F1C0F]" />
+                <X size={24} className="text-[#0F1C0F]" />
               ) : (
-                <Menu size={20} className="text-[#0F1C0F]" />
+                <Menu size={24} className="text-[#0F1C0F]" />
               )}
             </motion.button>
           </div>
@@ -97,7 +97,7 @@ export default function Navigation() {
                   damping: 30, 
                   stiffness: 300 
                 }}
-                className="fixed top-0 right-0 h-screen w-72 max-w-[80vw] bg-gradient-to-b from-[#1a3a35] to-[#0E2422] border-l border-[#99CC33]/30 shadow-2xl flex flex-col z-50 md:hidden overflow-hidden"
+                className="fixed top-0 right-0 h-full w-72 max-w-[80vw] bg-gradient-to-b from-[#1a3a35] to-[#0E2422] border-l border-[#99CC33]/30 shadow-2xl flex flex-col z-50 md:hidden overflow-hidden"
               >
                 {/* Compact Header */}
                 <div className="p-4 border-b border-[#99CC33]/20 flex-shrink-0">

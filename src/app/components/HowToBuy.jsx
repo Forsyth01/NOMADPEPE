@@ -67,7 +67,7 @@ export default function HowToBuy() {
           alt="Watch Tutorial"
           width={220}
           height={80}
-          className="h-[48.1112060546875px] md:h-20 w-[351px] m-auto "
+          className="h-[48.1112060546875px] md:h-20 lg:h-[120px] w-[351px] lg:w-[800px] m-auto "
           quality={90}
         />
       </motion.a>
