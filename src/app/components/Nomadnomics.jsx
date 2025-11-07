@@ -51,7 +51,7 @@ export default function Nomadnomics() {
   };
 
   return (
-    <section ref={ref} className="bg-[#0E2422] relative overflow-hidden py-8 px-4 md:px-6 ">
+    <section ref={ref} className="bg-[#0E2422] relative overflow-hidden py-8 px-8 md:px-6 ">
       {/* Decorative clouds for all screens */}
       <motion.div
         initial={{ opacity: 0, x: 50 }}

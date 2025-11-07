@@ -69,7 +69,7 @@ export default function FaqSection() {
   };
 
   return (
-    <section ref={ref} className="flex flex-col items-center py-20 pb-40 lg:pb-20 px-4 bg-[#0F1C0F] text-[#0F1C0F]  ">
+    <section ref={ref} className="flex flex-col items-center py-20 pb-40 lg:pb-20 px-8 bg-[#0F1C0F] text-[#0F1C0F]  ">
       {/* Header */}
       <motion.h2 
         variants={headerVariants}

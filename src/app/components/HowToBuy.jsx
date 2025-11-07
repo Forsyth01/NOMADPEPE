@@ -57,7 +57,7 @@ export default function HowToBuy() {
   return (
     <div
       ref={ref}
-      className="pb-5"
+      className="pb-5 px-4 lg:px-0"
       style={{
         background: `linear-gradient(rgba(69,102,49,0.5), rgba(69,102,49,0.8)), url('/BG htb.png') center/cover no-repeat`,
         backgroundSize: "cover",
