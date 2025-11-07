@@ -36,7 +36,7 @@ export default function FaqSection() {
             <div key={faq.id} className="border-b-2  border-[#273628]/50 pb-3">
               <button
                 onClick={() => toggle(faq.id)}
-                className="w-full flex items-center justify-between text-left  text-lg md:text-2xl text-[#273628] tracking-wide lucky"
+                className="w-full flex items-center justify-between text-left  text-xl md:text-2xl text-[#273628] tracking-wide lucky"
               >
                 {faq.question}
                 <span className="relative inline-block">
