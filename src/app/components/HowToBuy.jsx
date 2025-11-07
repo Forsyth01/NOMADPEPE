@@ -144,7 +144,7 @@ export default function HowToBuy() {
           alt="Watch Tutorial"
           width={220}
           height={80}
-          className="h-[48.1112060546875px] md:h-20 lg:h-[120px] w-[351px] lg:w-[800px] m-auto "
+          className="h-[48.1112060546875px] md:h-20 lg:h-[120px] w-[351px] lg:w-[800px] m-auto hover:scale-[101%] duration-200 transition-all"
           quality={90}
         />
       </motion.a>

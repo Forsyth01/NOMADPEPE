@@ -95,7 +95,7 @@ export default function Nomadnomics() {
               variants={itemVariants}
               className="mb-6 sm:mb-8 lg:text-left md:text-center mt-14 lg:mt-0"
             >
-              <h1 className="text-[#e5eed2] text-5xl sm:text-4xl md:text-5xl uppercase tracking-wide">
+              <h1 className="text-[#e5eed2] text-4xl sm:text-4xl md:text-5xl uppercase tracking-wide">
                 #NOMADNOMICS
               </h1>
             </motion.div>
