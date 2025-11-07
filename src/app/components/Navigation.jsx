@@ -168,7 +168,7 @@ export default function Navigation() {
                 </motion.div>
 
                 {/* Compact Buy Button */}
-                <motion.div 
+                {/* <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
@@ -186,7 +186,7 @@ export default function Navigation() {
                       BUY $NOMAD
                     </span>
                   </motion.a>
-                </motion.div>
+                </motion.div> */}
               </motion.div>
             </>
           )}
