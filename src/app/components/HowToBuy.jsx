@@ -50,7 +50,7 @@ export default function HowToBuy() {
             alt="How to Buy"
             width={500}
             height={500}
-            className="object-contain w-[367px] h-[537px sm:w-[400px] lg:w-[600px] xl:w-[880px] lg:relative right-20"
+            className="object-contain w-[467px] h-[537px sm:w-[400px] lg:w-[600px] xl:w-[880px] lg:relative right-20"
             quality={90}
           />
         </motion.div>
