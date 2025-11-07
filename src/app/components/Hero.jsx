@@ -38,7 +38,7 @@ export default function Hero() {
                       height={300}
                       quality={90}
                       className="relative lg:top-12 top-16 
-                      h-auto w-[332.5324830616657px]
+                      h-auto w-[352.5324830616657px]
                       xs:w-[250px]
                       sm:w-[300px]
                       md:w-[450px]
@@ -50,7 +50,7 @@ export default function Hero() {
                   </div>
 
                   {/* Tagline */}
-                  <p className="relative lg:bottom-4 xl:bottom:6 lucky text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[32px] px-4 sm:px-8 lg:px-0 rotate-[-2deg]">
+                  <p className="relative top-6 lg:top-0 lg:bottom-4 xl:bottom:6 lucky text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[32px] px-4 sm:px-8 lg:px-0 rotate-[-2deg]">
                     Hop On. Explore the Chain.
                   </p>
                 </div>
