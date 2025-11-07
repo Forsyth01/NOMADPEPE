@@ -21,8 +21,8 @@ export default function FaqSection() {
   return (
     <section className="flex flex-col items-center py-20 px-4 bg-[#0F1C0F] text-[#0F1C0F]">
       {/* Header */}
-      <h2 className="lucky text-4xl md:text-5xl mb-10 text-[#F1F5D8] font-['Luckiest_Guy'] text-center drop-shadow-[3px_3px_0px_#0F1C0F]">
-        FREQUENTLY ASKED <br /> QUESTIONS
+      <h2 className="lucky text-5xl md:text-5xl mb-10 text-[#F1F5D8] font-['Luckiest_Guy'] text-center drop-shadow-[3px_3px_0px_#0F1C0F]">
+        FREQUENTLY <br className='lg:hidden'/> ASKED <br /> QUESTIONS
       </h2>
 
       {/* FAQ Card with Shadow */}

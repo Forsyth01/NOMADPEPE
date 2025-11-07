@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export default function NomadMarquee() {
   return (
     <div className="bg-[#70903c]">
-    <div className="relative ">
+    <div className="relative z-70]">
       <img
         src="/marqeebg.png"
         alt="Nomad"
