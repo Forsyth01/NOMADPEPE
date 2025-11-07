@@ -1,7 +1,7 @@
-'use client';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
-import { Menu, X, Twitter, MessageCircle } from 'lucide-react';
+"use client";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+import { Menu, X, Twitter, MessageCircle } from "lucide-react";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,17 +9,17 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 30);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const menuItems = ['About/Tokenomics', 'About $Nomad', 'Why $Nomad'];
+  const menuItems = ["About/Tokenomics", "About $Nomad", "Why $Nomad"];
 
   return (
     <div className="absolute z-100 w-full">
       <motion.nav
-        className={`w-full sm:w-[60%] md:w-[55%] lg:w-[50%] xl:w-[45%] 2xl:w-[40%] m-auto my-2 sm:my-3 md:my-4 z-50 transition-all duration-500 py-2 sm:py-3 rounded-lg md:rounded-xl border border-[#CCE697] ${
-          scrolled ? '' : ''
+        className={`w-full sm:w-[60%] md:w-[55%] lg:w-[50%] xl:w-[45%] 2xl:w-[40%] m-auto my-2 sm:my-3 md:my-4 z-50 transition-all duration-500 py-2 sm:py-3 rounded-lg md:rounded-xl lg:border border-[#CCE697] ${
+          scrolled ? "" : ""
         }`}
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 flex justify-between items-center">
@@ -55,22 +55,28 @@ export default function Navigation() {
           </motion.a>
 
           {/* Mobile Menu Toggle */}
-          <motion.button
-            className="md:hidden text-white p-1 sm:p-2"
-            onClick={() => setIsOpen(!isOpen)}
-            whileTap={{ scale: 0.9 }}
-          >
-            {isOpen ? <X size={20} className="sm:w-6 sm:h-6" /> : <Menu size={20} className="sm:w-6 sm:h-6" />}
-          </motion.button>
+          <div className="flex justify-end w-full md:hidden">
+            <motion.button
+              className="text-black bg-[#81AF33] rounded-full p-2 mr-4 sm:p-2"
+              onClick={() => setIsOpen(!isOpen)}
+              whileTap={{ scale: 0.9 }}
+            >
+              {isOpen ? (
+                <X size={20} className="sm:w-6 sm:h-6 w-7 h-7" />
+              ) : (
+                <Menu size={20} className="sm:w-6 sm:h-6 w-7 h-7" />
+              )}
+            </motion.button>
+          </div>
         </div>
 
         {/* Mobile Slide Menu */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ x: '100%' }}
+              initial={{ x: "100%" }}
               animate={{ x: 0 }}
-              exit={{ x: '100%' }}
+              exit={{ x: "100%" }}
               transition={{ duration: 0.35 }}
               className="fixed top-0 right-0 h-screen w-full xs:w-4/5 sm:w-3/4 bg-black/95 backdrop-blur-lg border-l border-emerald-500/20 flex flex-col justify-between py-6 sm:py-8 px-4 sm:px-6 z-40"
             >

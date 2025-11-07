@@ -83,10 +83,10 @@ export default function Expedition() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.7 }}
-            className="md:relative hidden lg:flex items-center justify-center "
+            className="md:relative items-center justify-center "
           >
             {/* Golden Frame - Reduced Size */}
-            <div className="relative w-[300px] h-[400px] md:w-[400px] md:h-[500px] lg:w-[500px] lg:h-[600px]">
+            <div className="relative w-[350px] h-[400px] md:w-[400px] md:h-[500px] lg:w-[500px] lg:h-[600px]">
               <Image
                 src="/nomad_expedition_frame.png"
                 alt="Golden Frame"
