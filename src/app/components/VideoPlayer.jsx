@@ -17,7 +17,7 @@ export default function VideoPlayer() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-8" style={{ backgroundColor: '#242B24' }}>
+    <div className=" flex items-center justify-center p-8" style={{ backgroundColor: '#242B24' }}>
       <div className="w-full max-w-5xl">
         {/* Video Container */}
         <div className="relative group">

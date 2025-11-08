@@ -6,15 +6,18 @@ import SocialIcons from "./SocialIcons";
 
 export default function Hero() {
   return (
-    <section
-      style={{
-        backgroundImage: 'url("/assets/herobg.png")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        height: "full",
-      }}
-      className="overflow-hidden h-screen md:h-full lg:h-screen"
-    >
+    <section className="relative h-screen md:h-full lg:h-screen overflow-hidden">
+      {/* Mobile Background */}
+      <div
+        className="block md:hidden absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: 'url("/assets/herobg-mobile.png")' }}
+      ></div>
+
+      {/* Desktop Background */}
+      <div
+        className="hidden md:block absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: 'url("/assets/herobg.png")' }}
+      ></div>
       <div className="z-10 items-center h-full md:h-auto">
         <div className="w-full text-center h-full md:h-auto">
           <div className="flex justify-center items-center lg:h-screen overflow-hidden h-full md:h-auto">
