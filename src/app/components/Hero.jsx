@@ -13,7 +13,7 @@ export default function Hero() {
         backgroundPosition: "center",
         height: "full",
       }}
-      className="overflow-hidden"
+      className="overflow-hidden h-screen md:h-full lg:h-screen"
     >
       <div className="z-10 items-center">
         <div className="w-full text-center">
