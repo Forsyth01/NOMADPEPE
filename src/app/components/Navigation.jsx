@@ -1,7 +1,7 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Menu, X, Twitter, MessageCircle, Send, Music2 } from "lucide-react";
+import { Menu, X, Send, Instagram, Twitter, Youtube } from "lucide-react";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,10 +15,26 @@ export default function Navigation() {
 
   const menuItems = ["About/Tokenomics", "About $Nomad", "Why $Nomad"];
   const socialIcons = [
-    { icon: Send, label: "Telegram" },
-    { icon: Twitter, label: "Twitter" },
-    { icon: MessageCircle, label: "Discord" },
-    { icon: Music2, label: "TikTok" }
+    {
+      icon: Send,
+      label: "Telegram",
+      link: "https://t.me/nomadpepecoin",
+    },
+    {
+      icon: Instagram,
+      label: "Instagram",
+      link: "https://www.instagram.com/nomadcoinhq?igsh=OTlrY3VwcXo0eXlq",
+    },
+    {
+      icon: Twitter,
+      label: "X",
+      link: "https://x.com/nomadcoinhq?s=21",
+    },
+    {
+      icon: Youtube,
+      label: "YouTube",
+      link: "https://youtube.com/@soullabsofficial?si=lfFTcx0w61gbC-d-",
+    },
   ];
 
   return (
@@ -46,7 +62,7 @@ export default function Navigation() {
 
           {/* Desktop BUY $NOMAD Button */}
           <motion.a
-            href="#"
+            href="#howtobuy"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             className="relative hidden md:inline-block font-bold text-[#0F1C0F] text-[14px] lg:text-[16px] xl:text-lg uppercase tracking-wide"
@@ -74,7 +90,7 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Optimized Mobile Slide Menu - Fits 100vh */}
+        {/* Optimized Mobile Slide Menu */}
         <AnimatePresence>
           {isOpen && (
             <>
@@ -86,23 +102,23 @@ export default function Navigation() {
                 onClick={() => setIsOpen(false)}
                 className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
               />
-              
-              {/* Menu Panel - Compact Design */}
+
+              {/* Menu Panel */}
               <motion.div
                 initial={{ x: "100%", opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: "100%", opacity: 0 }}
-                transition={{ 
-                  type: "spring", 
-                  damping: 30, 
-                  stiffness: 300 
+                transition={{
+                  type: "spring",
+                  damping: 30,
+                  stiffness: 300,
                 }}
                 className="fixed top-0 right-0 h-full w-72 max-w-[80vw] bg-gradient-to-b from-[#1a3a35] to-[#0E2422] border-l border-[#99CC33]/30 shadow-2xl flex flex-col z-50 md:hidden overflow-hidden"
               >
                 {/* Compact Header */}
                 <div className="p-4 border-b border-[#99CC33]/20 flex-shrink-0">
                   <div className="flex items-center justify-between">
-                    <motion.h2 
+                    <motion.h2
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.1 }}
@@ -122,7 +138,7 @@ export default function Navigation() {
                   </div>
                 </div>
 
-                {/* Scrollable Menu Items */}
+                {/* Menu Items */}
                 <div className="flex-1 overflow-y-auto py-2 px-4 space-y-2">
                   {menuItems.map((item, index) => (
                     <motion.a
@@ -140,8 +156,8 @@ export default function Navigation() {
                   ))}
                 </div>
 
-                {/* Compact Social Links */}
-                <motion.div 
+                {/* Social Links */}
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
@@ -151,10 +167,12 @@ export default function Navigation() {
                     Join Community
                   </h3>
                   <div className="flex justify-center space-x-3">
-                    {socialIcons.map(({ icon: Icon, label }, index) => (
+                    {socialIcons.map(({ icon: Icon, label, link }, index) => (
                       <motion.a
                         key={label}
-                        href="#"
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.5 + index * 0.1 }}
@@ -166,27 +184,6 @@ export default function Navigation() {
                     ))}
                   </div>
                 </motion.div>
-
-                {/* Compact Buy Button */}
-                {/* <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6 }}
-                  className="p-4 pt-2 flex-shrink-0"
-                >
-                  <motion.a
-                    href="#"
-                    onClick={() => setIsOpen(false)}
-                    whileHover={{ scale: 1.03, y: -1 }}
-                    whileTap={{ scale: 0.97 }}
-                    className="relative block font-bold text-[#0F1C0F] text-sm uppercase tracking-wide text-center"
-                  >
-                    <span className="absolute inset-0 bg-[#58731f] rounded-xl translate-x-1 translate-y-1 -z-10"></span>
-                    <span className="relative bg-[#99CC33] rounded-xl border border-[#0F1C0F] px-4 py-3 inline-block text-sm w-full shadow hover:bg-[#8BC033] transition-colors">
-                      BUY $NOMAD
-                    </span>
-                  </motion.a>
-                </motion.div> */}
               </motion.div>
             </>
           )}

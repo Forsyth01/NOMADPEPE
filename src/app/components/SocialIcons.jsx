@@ -28,6 +28,7 @@ export default function SocialIcons() {
         <motion.a
           key={id}
           href={link}
+          target="_blank"
           whileHover={{ y: -4, scale: 1.07 }}
           whileTap={{ scale: 0.95 }}
           style={{ rotate }}
@@ -38,11 +39,7 @@ export default function SocialIcons() {
 
           {/* Main Icon Box with Image */}
           <span className="">
-            <img
-              src={image}
-              alt={`Social icon ${id}`}
-              className="w-full h-12 object-contain"
-            />
+            <img src={image} className="w-full h-12 object-contain" />
           </span>
         </motion.a>
       ))}

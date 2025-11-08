@@ -58,8 +58,8 @@ export default function Hero() {
                 {/* Buy Button */}
                 <div className="hidden lg:block">
                   <motion.a
-                    href="#"
-                    whileHover={{ scale: 1.05 }}
+                    href="#howtobuy"
+                    whileHover={{ scale: 1.06 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     <img src="/buynomad.png" alt="" className="m-auto h-20" />
@@ -74,13 +74,13 @@ export default function Hero() {
 
               {/* Right Image */}
               <motion.div
-                className="relative h-130 w-94 sm:w-80 md:w-[20rem] lg:w-[50rem] xl:w-[48rem] 2xl:w-[50rem] sm:h-80 md:h-[20rem] lg:h-[36rem] xl:h-[45rem] 2xl:h-[50rem] mx-auto"
+                className="relative h-130 w-130 sm:w-80 md:w-[20rem] lg:w-[50rem] xl:w-[48rem] 2xl:w-[50rem] sm:h-80 md:h-[20rem] lg:h-[36rem] xl:h-[45rem] 2xl:h-[50rem] mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 <Image
-                  src="/assets/image2.png"
+                  src="/assets/hero.png"
                   alt="Nomad Pepe"
                   fill
                   className="lg:object-contain object-cover"

@@ -58,6 +58,7 @@ export default function Expedition() {
   return (
     <div
       ref={ref}
+      id="about $nomad"
       className="min-h-screen sm:h-screen lg:h-screen bg-[#456631] flex items-center justify-center pb-20 py-4 pt-4 lg:pt-4 lg:pb-4"
       style={{
         background: `linear-gradient(rgba(69,102,49,0.6), rgba(69,102,49,0.8)), url('/nomad_expedition_frame_bg.png') center/cover no-repeat`,
