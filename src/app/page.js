@@ -17,6 +17,7 @@ import BuyUsingJupiter from './components/BuyUsingJupiter';
 import Nomadnomics from './components/Nomadnomics';
 import NomadBadge from './components/NomadBadge';
 import ExpeditionSection from './components/ExpeditionSection';
+import VideoPlayer from './components/VideoPlayer';
 
 export default function Home() {
   useEffect(() => {
@@ -50,6 +51,7 @@ export default function Home() {
       <Hero />
       <Marquee />
       <HowToBuy/>
+      <VideoPlayer/>
       {/* <BuyUsingJupiter/> */}
       <Nomadnomics />
       <ExpeditionSection/>

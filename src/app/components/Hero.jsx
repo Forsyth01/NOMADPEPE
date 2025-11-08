@@ -41,8 +41,8 @@ export default function Hero() {
                       xs:w-[250px]
                       sm:w-[300px]
                       md:w-[450px]
-                      lg:w-[750px]
-                      xl:w-[800.7236653215286px]
+                      lg:w-[550px]
+                      xl:w-[650.7236653215286px]
                       xl:h-[350.48741138446843px]
                       2xl:w-[700px]"
                     />
