@@ -13,6 +13,18 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const menuItems = ["About/Tokenomics", "About $Nomad", "Why $Nomad"];
   const socialIcons = [
     {
@@ -38,9 +50,9 @@ export default function Navigation() {
   ];
 
   return (
-    <div className="absolute z-100 w-full">
+    <div className="absolute z-50 w-full">
       <motion.nav
-        className={`w-full sm:w-[60%] md:w-[50%] lg:w-[50%] xl:w-[45%] 2xl:w-[40%] m-auto my-2 sm:my-3 md:my-4 z-50 transition-all duration-500 py-2 sm:py-3 rounded-lg md:rounded-xl md:border border-[#CCE697] ${
+        className={`w-full sm:w-[60%] md:w-[50%] lg:w-[50%] xl:w-[45%] 2xl:w-[40%] m-auto my-2 sm:my-3 md:my-4 transition-all duration-500 py-2 sm:py-3 rounded-lg md:rounded-xl md:border border-[#CCE697] ${
           scrolled ? "" : ""
         }`}
       >
@@ -90,7 +102,7 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Optimized Mobile Slide Menu */}
+        {/* Mobile Slide Menu */}
         <AnimatePresence>
           {isOpen && (
             <>
@@ -105,18 +117,18 @@ export default function Navigation() {
 
               {/* Menu Panel */}
               <motion.div
-                initial={{ x: "100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                exit={{ x: "100%", opacity: 0 }}
+                initial={{ x: "100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "100%" }}
                 transition={{
                   type: "spring",
-                  damping: 30,
-                  stiffness: 300,
+                  damping: 25,
+                  stiffness: 200,
                 }}
-                className="fixed top-0 right-0 h-full w-72 max-w-[80vw] bg-gradient-to-b from-[#1a3a35] to-[#0E2422] border-l border-[#99CC33]/30 shadow-2xl flex flex-col justify-between z-50 md:hidden"
+                className="fixed top-0 right-0 h-full w-[280px] max-w-[85vw] bg-gradient-to-b from-[#1a3a35] to-[#0E2422] border-l border-[#99CC33]/30 shadow-2xl z-50 md:hidden overflow-y-auto"
               >
                 {/* Header */}
-                <div className="p-4 border-b border-[#99CC33]/20 flex-shrink-0">
+                <div className="p-4 border-b border-[#99CC33]/20">
                   <div className="flex items-center justify-between">
                     <h2 className="text-xl font-bold text-[#99CC33] lucky">
                       Menu
@@ -131,17 +143,17 @@ export default function Navigation() {
                 </div>
 
                 {/* Menu Links */}
-                <div className="flex flex-col items-center justify-center flex-1 space-y-3 px-4">
+                <div className="px-4 py-6 space-y-3">
                   {menuItems.map((item, index) => (
                     <motion.a
                       key={item}
                       href={`#${item.toLowerCase()}`}
                       onClick={() => setIsOpen(false)}
-                      initial={{ opacity: 0, x: 50 }}
+                      initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.1 + index * 0.1 }}
-                      whileHover={{ x: 4, scale: 1.02 }}
-                      className="block w-full text-center p-3 rounded-xl bg-[#2a4a45] hover:bg-[#99CC33]/20 border border-[#99CC33]/10 text-[#E5EED2] text-base font-medium transition-all duration-300 shadow"
+                      transition={{ delay: 0.1 + index * 0.05 }}
+                      whileHover={{ x: 4 }}
+                      className="block w-full text-center p-3 rounded-xl bg-[#2a4a45] hover:bg-[#99CC33]/20 border border-[#99CC33]/10 text-[#E5EED2] text-base font-medium transition-all duration-300"
                     >
                       {item}
                     </motion.a>
@@ -149,24 +161,25 @@ export default function Navigation() {
                 </div>
 
                 {/* Social Section */}
-                <div className="p-4 border-t border-[#99CC33]/20 flex-shrink-0 bg-[#0F1C0F]/20">
+                <div className="px-4 py-4 mt-auto border-t border-[#99CC33]/20 bg-[#0F1C0F]/20">
                   <h3 className="text-[#99CC33] text-xs font-semibold mb-3 text-center uppercase tracking-wider">
                     Join Community
                   </h3>
-                  <div className="flex justify-center space-x-3">
+                  <div className="flex justify-center gap-3 flex-wrap">
                     {socialIcons.map(({ icon: Icon, label, link }, index) => (
                       <motion.a
                         key={label}
                         href={link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        initial={{ opacity: 0, scale: 0 }}
+                        initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.5 + index * 0.1 }}
-                        whileHover={{ scale: 1.15, y: -1 }}
-                        className="p-2 bg-[#99CC33] rounded-xl text-[#0F1C0F] shadow border border-[#0F1C0F] hover:bg-[#8BC033] transition-colors"
+                        transition={{ delay: 0.3 + index * 0.05 }}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="p-2.5 bg-[#99CC33] rounded-xl text-[#0F1C0F] shadow border border-[#0F1C0F] hover:bg-[#8BC033] transition-colors"
                       >
-                        <Icon size={16} />
+                        <Icon size={18} />
                       </motion.a>
                     ))}
                   </div>
