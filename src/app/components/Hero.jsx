@@ -29,7 +29,13 @@ export default function Hero() {
       {/* Desktop Background */}
       <div
         className="hidden md:block absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: 'url("/assets/herobg.png")' }}
+        style={{
+          backgroundImage: 'url("/assets/herobg2.png")',
+          backgroundColor: "rgba(0, 0, 0, 0.7)",
+          backgroundBlendMode: "multiply",
+          backgroundSize: "cover",
+          opacity: 0.8,
+        }}
       ></div>
       <div className="relative z-10 items-center h-full md:h-auto">
         <div className="w-full text-center h-full md:h-auto">
