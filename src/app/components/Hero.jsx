@@ -15,15 +15,14 @@ export default function Hero() {
       }}
       className="overflow-hidden h-screen md:h-full lg:h-screen"
     >
-      <div className="z-10 items-center">
-        <div className="w-full text-center">
-          <div className="flex justify-center items-center lg:h-screen overflow-hidden">
+      <div className="z-10 items-center h-full md:h-auto">
+        <div className="w-full text-center h-full md:h-auto">
+          <div className="flex justify-center items-center lg:h-screen overflow-hidden h-full md:h-auto">
             {/* FLEX CONTAINER */}
-            <div className="flex flex-col lg:flex-row justify-between items-center gap-6 sm:gap-8 lg:gap-0 w-full">
-              
+            <div className="flex flex-col lg:flex-row justify-between items-center gap-6 sm:gap-8 lg:gap-0 w-full h-full md:h-auto">
               {/* Left Content */}
               <motion.div
-                className="lg:pl-12"
+                className="lg:pl-12 flex-shrink-0"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -74,7 +73,10 @@ export default function Hero() {
 
               {/* Right Image */}
               <motion.div
-                className="relative h-[500px] w-[500px] sm:w-80 sm:h-80 md:w-[20rem] md:h-[20rem] lg:w-[50rem] lg:h-[36rem] xl:w-[48rem] xl:h-[45rem] 2xl:w-[50rem] 2xl:h-[50rem] lg:mx-auto overflow-hidden"
+                className="relative h-[500px] w-[500px] sm:w-80 sm:h-80 md:w-[20rem] md:h-[20rem] 
+  lg:w-[50rem] lg:h-[36rem] xl:w-[48rem] xl:h-[45rem] 2xl:w-[50rem] 2xl:h-[50rem] 
+  lg:mx-auto overflow-hidden 
+  mt-auto md:mt-6 lg:mt-0"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -88,7 +90,6 @@ export default function Hero() {
                   quality={90}
                 />
               </motion.div>
-
             </div>
           </div>
         </div>
