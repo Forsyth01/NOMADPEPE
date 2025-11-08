@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function VideoPlayer() {
   const [showControls, setShowControls] = useState(false);
@@ -30,7 +30,6 @@ export default function VideoPlayer() {
       } else if (element.msRequestFullscreen) {
         element.msRequestFullscreen(); // IE/Edge
       }
-      setIsFullscreen(true);
     } else {
       // Exit fullscreen
       if (document.exitFullscreen) {
@@ -40,12 +39,11 @@ export default function VideoPlayer() {
       } else if (document.msExitFullscreen) {
         document.msExitFullscreen(); // IE/Edge
       }
-      setIsFullscreen(false);
     }
   };
 
-  // Listen for fullscreen changes
-  useState(() => {
+  // Listen for fullscreen changes - only run on client side
+  useEffect(() => {
     const handleFullscreenChange = () => {
       setIsFullscreen(!!document.fullscreenElement);
     };
