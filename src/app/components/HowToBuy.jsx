@@ -13,7 +13,7 @@ export default function HowToBuy() {
       id="howtobuy"
       className="pb-5 px-4 lg:px-0"
       style={{
-        background: `linear-gradient(rgba(69,102,49,0.5), rgba(69,102,49,0.8)), url('/BG htb.png') center/cover no-repeat`,
+        background: `linear-gradient(rgba(69,102,49,0.5), rgba(69,102,49,0.8)), url('/bg 2.png') center/cover no-repeat`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

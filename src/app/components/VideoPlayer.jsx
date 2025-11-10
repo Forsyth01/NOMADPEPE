@@ -201,7 +201,7 @@ export default function VideoPlayer() {
                   <div>
                     <p className="text-xs text-gray-400">Adventure Type</p>
                     <p className="text-white font-normal">
-                      Cross-Chain Journey
+                      Built for Solana
                     </p>
                   </div>
                 </div>
