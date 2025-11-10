@@ -6,10 +6,10 @@ import SocialIcons from "./SocialIcons";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen md:h-full lg:h-screen overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Mobile Background */}
       <div
-        className="block md:hidden top-0 absolute inset-0 bg-cover bg-center"
+        className="block md:hidden absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: 'url("/assets/Frame 70.png")',
           backgroundColor: "rgba(0, 0, 0, 0.6)",
@@ -37,89 +37,78 @@ export default function Hero() {
           opacity: 0.8,
         }}
       ></div>
-      <div className="relative z-10 items-center h-full md:h-auto">
-        <div className="w-full text-center h-full md:h-auto">
-          <div className="flex justify-center items-center lg:h-screen overflow-hidden h-full md:h-auto">
-            {/* FLEX CONTAINER */}
-            <div className="flex flex-col lg:flex-row justify-between items-center gap-6 sm:gap-8 lg:gap-0 w-full h-full md:h-auto pt-6 md:pt-0">
-              {/* Left Content */}
-              <motion.div
-                className="lg:pl-12 flex-shrink-0 relative z-20"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <div>
-                  {/* Logo */}
-                  <div>
-                    <Image
-                      src="/assets/logo.png"
-                      alt="Logo"
-                      width={900}
-                      height={300}
-                      quality={90}
-                      className="relative lg:top-12 top-16 
-                      h-auto w-[352.5324830616657px]
-                      xs:w-[250px]
-                      sm:w-[300px]
-                      md:w-[450px]
-                      lg:w-[500px]
-                      xl:w-[650.7236653215286px]
-                      xl:h-[350.48741138446843px]
-                      2xl:w-[700px]"
-                    />
-                  </div>
 
+      {/* Centered Content */}
+      <div className="relative z-10 w-full px-6 py-12 h-full">
+        <div className="max-w-7xl mx-auto h-full">
+          <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-12 h-full">
+            {/* Left Content */}
+            <motion.div
+              className="relative z-20 text-center lg:text-left lg:left-10 pt-4 lg:pt-0"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+                {/* Logo */}
+                <div className="flex justify-center lg:justify-start">
+                  <Image
+                    src="/assets/logo.png"
+                    alt="Logo"
+                    width={900}
+                    height={300}
+                    quality={90}
+                    className="h-auto w-[353px] sm:w-[250px] md:w-[450px] lg:w-[500px] xl:w-[650px]"
+                  />
+                </div>
+              <div className="relative bottom-10 ">
+                <div className="">
                   {/* Tagline */}
-                  <p className="relative top-6 lg:top-0 lg:bottom-4 xl:bottom:6 lucky text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[32px] px-4 sm:px-8 lg:px-0 rotate-[-2deg]">
+                  <p className="lucky pt-2 lg:pt-0 text-lg text-center sm:text-2xl md:text-3xl lg:text-3xl xl:text-[35px] rotate-[-2deg]">
                     Hop On. Explore the Chain.
                   </p>
                 </div>
 
                 {/* Buy Button */}
-                <div className="hidden lg:block mt-8">
+                <div className="mt-8 hidden lg:block">
                   <motion.a
                     href="#howtobuy"
                     whileHover={{ scale: 1.06 }}
                     whileTap={{ scale: 0.95 }}
-                    className="inline-block"
+                    className=""
                   >
                     <Image
                       src="/buynomad.png"
                       alt="Buy Nomad"
                       width={200}
                       height={80}
-                      className="m-auto h-20 w-auto"
+                      className="m-auto h-20 "
                     />
                   </motion.a>
                 </div>
 
                 {/* Social Icons */}
-                <div className="py-3 sm:py-4 mt-3 sm:mt-4 lg:mt-0 hidden lg:block">
+                <div className="mt-6 hidden lg:block">
                   <SocialIcons />
                 </div>
-              </motion.div>
-
-              {/* Right Image */}
-              <motion.div
-                className="relative h-[500px] w-[500px] sm:w-80 sm:h-80 md:w-[20rem] md:h-[20rem] 
-  lg:w-[50rem] lg:h-[36rem] xl:w-[48rem] xl:h-[45rem] 2xl:w-[50rem] 2xl:h-[50rem] 
-  lg:mx-auto overflow-hidden 
-  mt-auto md:mt-6 lg:mt-0 z-10"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                <Image
-                  src="/assets/hero.png"
-                  alt="Nomad Pepe"
-                  fill
-                  className="lg:object-contain object-cover"
-                  priority
-                  quality={90}
-                />
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
+            {/* Right Image */}
+            <motion.div
+              className="relative w-[500px] h-[500px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] 
+              lg:w-[500px] lg:h-[500px] xl:w-[600px] xl:h-[600px] mt-auto lg:mt-0"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <Image
+                src="/assets/hero.png"
+                alt="Nomad Pepe"
+                fill
+                className="object-contain"
+                priority
+                quality={90}
+              />
+            </motion.div>
           </div>
         </div>
       </div>
