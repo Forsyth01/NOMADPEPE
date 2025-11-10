@@ -56,7 +56,7 @@ export default function HowToBuy() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col items-center justify-center order-1 lg:order-2 relative lg:right-20"
+            className="flex flex-col items-center justify-center order-1 lg:order-2 relative lg:right-20 bottom-2"
           >
             <Image
               src="/howtobuy2.png"
