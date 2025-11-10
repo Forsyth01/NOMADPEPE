@@ -77,12 +77,12 @@ export default function SixMonthsJourney() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl md:text-3xl text-white ">The Epic Journey</h3>
+                  <h3 className="text-2xl md:text-3xl text-white font-semibold">The Epic Journey</h3>
                 </div>
                 
                 <div className="space-y-5 text-gray-300 leading-relaxed text-lg">
                   <p className="text-xl">
-                    <span className="text-green-400 ">Our ride with nomad and Abbosi</span>, six months on the road from <span className="text-white font-medium">Thailand to Dubai</span>. 🏍️
+                    <span className="text-green-400 font-medium">Our ride with nomad and Abbosi</span>, six months on the road from <span className="text-white font-medium">Thailand to Dubai</span>. 🏍️
                   </p>
                   <p className="text-lg">
                     Get ready for the <span className="text-green-400">live streams</span>, the <span className="text-white font-medium">"Do Good Deeds,"</span> and countless lives we'll cross and impact along the way. 💫
@@ -116,14 +116,25 @@ export default function SixMonthsJourney() {
               {/* Right Column - Instagram Embed */}
               <div className="relative">
                 <div className="relative bg-black/20 rounded-2xl overflow-hidden border border-green-500/20 shadow-2xl">
-                  <div className="aspect-[9/16] max-h-[650px]">
+                  <div className="aspect-[9/16] max-h-[650px] bg-gradient-to-br from-green-900/20 to-emerald-900/10 flex items-center justify-center">
+                    {/* Loading placeholder */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center space-y-3">
+                        <div className="w-12 h-12 border-4 border-green-500/30 border-t-green-400 rounded-full animate-spin mx-auto"></div>
+                        <p className="text-green-400 text-sm">Loading journey...</p>
+                      </div>
+                    </div>
+                    
+                    {/* Instagram iframe */}
                     <iframe
                       src="https://www.instagram.com/reel/DQ4QegXkvp0/embed"
-                      className="w-full h-full"
+                      className="w-full h-full relative z-10"
                       frameBorder="0"
                       scrolling="no"
                       allow="encrypted-media"
                       title="Mr. Abbosi Journey Video"
+                      loading="lazy"
+                      style={{ background: 'transparent' }}
                     ></iframe>
                   </div>
                 </div>
