@@ -63,7 +63,7 @@ export default function HowToBuy() {
               alt="How to Buy"
               width={880}
               height={880}
-              className="object-contain w-[390px] sm:w-[400px] md:w-[500px] lg:w-[550px] xl:w-[700px] 2xl:w-[880px]"
+              className="object-contain m-auto lg:m-0 w-[390px] sm:w-[400px] md:w-[500px] lg:w-[550px] xl:w-[700px] 2xl:w-[880px]"
               quality={90}
             />
             
