@@ -19,6 +19,7 @@ import NomadBadge from './components/NomadBadge';
 import ExpeditionSection from './components/ExpeditionSection';
 import VideoPlayer from './components/VideoPlayer';
 import NomadJourney from './components/TheNomadJourney';
+import SixMonthsJourney from './components/SixMonthsJourney';
 
 export default function Home() {
   useEffect(() => {
@@ -57,6 +58,7 @@ export default function Home() {
       <Nomadnomics />
       <ExpeditionSection/>
       <NomadJourney/>
+      <SixMonthsJourney/>
       <FaqSection/>
       <NomadBadge/>
       {/* <ParallaxSection /> */}
