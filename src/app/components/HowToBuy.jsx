@@ -44,7 +44,7 @@ export default function HowToBuy() {
                 alt="Nomad Beach" 
                 width={880}
                 height={880}
-                className="object-contain w-[300px] sm:w-[400px] md:w-[500px] lg:w-[550px] xl:w-[700px] 2xl:w-[880px]"
+                className="object-contain w-[400px] sm:w-[400px] md:w-[500px] lg:w-[550px] xl:w-[700px] 2xl:w-[880px]"
                 quality={100}
                 priority
               />
@@ -56,14 +56,14 @@ export default function HowToBuy() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col items-center justify-center order-1 lg:order-2 relative lg:right-20 bottom-2"
+            className="flex flex-col items-center justify-center order-1 lg:order-2 relative lg:right-20 bottom-0.5"
           >
             <Image
               src="/howtobuy2.png"
               alt="How to Buy"
               width={880}
               height={880}
-              className="object-contain w-[320px] sm:w-[400px] md:w-[500px] lg:w-[550px] xl:w-[700px] 2xl:w-[880px]"
+              className="object-contain w-[390px] sm:w-[400px] md:w-[500px] lg:w-[550px] xl:w-[700px] 2xl:w-[880px]"
               quality={90}
             />
             
