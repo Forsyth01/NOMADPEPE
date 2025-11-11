@@ -20,6 +20,7 @@ import ExpeditionSection from './components/ExpeditionSection';
 import VideoPlayer from './components/VideoPlayer';
 import NomadJourney from './components/TheNomadJourney';
 import SixMonthsJourney from './components/SixMonthsJourney';
+import TappedInCollab from './components/TappedInCollab';
 
 export default function Home() {
   useEffect(() => {
@@ -59,6 +60,7 @@ export default function Home() {
       <ExpeditionSection/>
       <NomadJourney/>
       <SixMonthsJourney/>
+      <TappedInCollab/>
       <FaqSection/>
       <NomadBadge/>
       {/* <ParallaxSection /> */}

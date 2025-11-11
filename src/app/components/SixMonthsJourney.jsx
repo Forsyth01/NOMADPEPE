@@ -57,7 +57,7 @@ export default function SixMonthsJourney() {
             <div className="h-px w-12 md:w-24 bg-gradient-to-l from-transparent to-green-500"></div>
           </div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-white mb-4 font-bold">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-white mb-4 ">
             Six Months on the Road
           </h2>
           <p className="text-xl md:text-2xl text-green-400">
