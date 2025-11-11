@@ -103,8 +103,8 @@ export default function TappedInCollab() {
               <div className="absolute -inset-1 bg-gradient-to-r from-green-600 via-emerald-500 to-green-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-500"></div>
               <div className="relative aspect-video bg-black rounded-2xl overflow-hidden border-2 border-green-500/30">
                 <video controls className="w-full h-full object-contain">
-                  {/* <source src="/TapinAcademy.mov" type="video/mp4" />
-                  <source src="/TapinAcademy.mov" type="video/quicktime" /> */}
+                  <source src="/TapinAcademy2.mov.mp4" type="video/mp4" />
+                  <source src="/TapinAcademy2.mov.mp4" type="video/quicktime" />
                   Your browser does not support the video tag.
                 </video>
               </div>
