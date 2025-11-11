@@ -98,7 +98,6 @@ export default function TappedInCollab() {
         {/* Video + Offer Side by Side */}
         <div className="grid lg:grid-cols-5 gap-8 mb-16">
           {/* Video - Takes up 3 columns */}
-          {/* Video - Takes up 3 columns */}
           <motion.div variants={itemVariants} className="lg:col-span-3">
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-green-600 via-emerald-500 to-green-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-500"></div>
@@ -107,8 +106,8 @@ export default function TappedInCollab() {
                   className="w-full h-full"
                   src="https://www.youtube.com/embed/aqDIs-GKjZM"
                   title="Tapped In Academy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                  allowFullScreen={true}
                 ></iframe>
               </div>
             </div>
