@@ -14,6 +14,16 @@ export default function Navigation() {
   }, []);
 
   const menuItems = ["About/Tokenomics", "About $Nomad", "Why $Nomad"];
+  
+  const mobileMenuItems = [
+    { label: "About/Tokenomics", href: "#about/tokenomics" },
+    { label: "About $Nomad", href: "#about $nomad" },
+    { label: "Why $Nomad", href: "#why $nomad" },
+    { label: "The Nomad Journey", href: "#nomad-journey" },
+    { label: "Tapped In Academy", href: "#tapped-in-academy" },
+    { label: "Events", href: "#events" },
+  ];
+  
   const socialIcons = [
     {
       icon: Send,
@@ -74,7 +84,7 @@ export default function Navigation() {
           </motion.a>
 
           {/* Mobile Menu Toggle */}
-          <div className="flex justify-end w-full md:hidden">
+          <div className="flex justify-end w-full md:hidden ">
             <motion.button
               className="text-[#0F1C0F] bg-[#99CC33] hover:bg-[#8BC033] rounded-2xl p-2 mr-2 shadow-lg border-2 border-[#0F1C0F]"
               onClick={() => setIsOpen(!isOpen)}
@@ -140,10 +150,10 @@ export default function Navigation() {
 
                 {/* Menu Items */}
                 <div className="flex-1 overflow-y-auto py-2 px-4 space-y-2">
-                  {menuItems.map((item, index) => (
+                  {mobileMenuItems.map((item, index) => (
                     <motion.a
-                      key={item}
-                      href={`#${item.toLowerCase()}`}
+                      key={item.label}
+                      href={item.href}
                       onClick={() => setIsOpen(false)}
                       initial={{ opacity: 0, x: 50 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -151,7 +161,7 @@ export default function Navigation() {
                       whileHover={{ x: 4, scale: 1.02 }}
                       className="block p-3 rounded-xl bg-[#2a4a45] hover:bg-[#99CC33]/20 border border-[#99CC33]/10 text-[#E5EED2] text-base font-medium transition-all duration-300 shadow"
                     >
-                      {item}
+                      {item.label}
                     </motion.a>
                   ))}
                 </div>
