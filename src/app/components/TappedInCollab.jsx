@@ -158,27 +158,27 @@ export default function TappedInCollab() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                icon: "📊",
+                
                 title: "Live Daily Market Streams",
                 description: "Learn in real time as pros break down the charts",
               },
               {
-                icon: "📈",
+                
                 title: "TIA Trendsetter Indicator",
                 description: "Spot trends and sharpen your edge",
               },
               {
-                icon: "📚",
+                
                 title: "FREE Full Trading Course",
                 description: "From beginner to advanced, it's all included",
               },
               {
-                icon: "👥",
+                
                 title: "Private Community Support",
                 description: "Ask questions and grow alongside other traders",
               },
               {
-                icon: "✨",
+                
                 title: "Lifetime Upgrade",
                 description: "After 12 months, you own the membership for life",
               },

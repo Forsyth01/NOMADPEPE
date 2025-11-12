@@ -116,7 +116,6 @@ export default function LuxuryVillaCollab() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-3">
-                <span className="px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-sm border border-green-500/30 font-normal">Ocean Views</span>
                 <span className="px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-sm border border-green-500/30 font-normal">Private Pool</span>
                 <span className="px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-sm border border-green-500/30 font-normal">4 Bedrooms</span>
                 <span className="px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-sm border border-green-500/30 font-normal">Electronic Gating</span>
