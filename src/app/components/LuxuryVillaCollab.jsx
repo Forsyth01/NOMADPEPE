@@ -55,13 +55,15 @@ export default function LuxuryVillaCollab() {
         <div
           className="absolute top-1/4 -left-10 w-72 h-72 rounded-full blur-3xl"
           style={{
-            background: "radial-gradient(circle, rgba(34, 197, 94, 0.15) 0%, transparent 70%)",
+            background:
+              "radial-gradient(circle, rgba(34, 197, 94, 0.15) 0%, transparent 70%)",
           }}
         ></div>
         <div
           className="absolute bottom-1/4 -right-10 w-96 h-96 rounded-full blur-3xl"
           style={{
-            background: "radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%)",
+            background:
+              "radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%)",
           }}
         ></div>
       </div>
@@ -83,7 +85,8 @@ export default function LuxuryVillaCollab() {
             Luxury Villa <span className="text-green-400">Experience</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto font-normal">
-            Hold $NOMAD and unlock exclusive access to luxury travel, events, and a global community
+            Hold $NOMAD and unlock exclusive access to luxury travel, events,
+            and a global community
           </p>
         </motion.div>
 
@@ -102,42 +105,64 @@ export default function LuxuryVillaCollab() {
           </div>
         </motion.div>
 
- 
-
         {/* Asymmetric Grid Layout */}
         <div className="grid lg:grid-cols-12 gap-6 mb-20 mt-16">
           {/* Large Feature Card */}
           <motion.div variants={itemVariants} className="lg:col-span-7">
             <div className="bg-gradient-to-br from-green-500/10 to-emerald-600/10 rounded-3xl p-10 border-2 border-green-500/20 h-full flex flex-col justify-between hover:border-green-500/40 transition-all group">
               <div>
-                <h3 className="text-3xl text-white mb-4 font-normal">Your Luxury Villa Awaits</h3>
+                <h3 className="text-3xl text-white mb-4 font-normal">
+                  Your Luxury Villa Awaits
+                </h3>
                 <p className="text-gray-300 leading-relaxed text-lg font-normal mb-6">
-                  We just secured a luxury villa for 1 whole year… and yes, you can stay here for FREE if you’re a $NOMAD holder. (T&Cs apply) must have minimum holding.
+                  We just secured a luxury villa for 1 whole year… and yes, you
+                  can stay here for FREE if you’re a $NOMAD holder. (T&Cs apply)
+                  must have minimum holding.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-sm border border-green-500/30 font-normal">Private Pool</span>
-                <span className="px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-sm border border-green-500/30 font-normal">4 Bedrooms</span>
-                <span className="px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-sm border border-green-500/30 font-normal">Electronic Gating</span>
-                <span className="px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-sm border border-green-500/30 font-normal">Private Community</span>
-                <span className="px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-sm border border-green-500/30 font-normal">Premium Location</span>
+              <div className="flex flex-wrap lg:gap-3 gap-2">
+                <span className="px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-sm border border-green-500/30 font-normal">
+                  Private Pool
+                </span>
+                <span className="px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-sm border border-green-500/30 font-normal">
+                  4 Bedrooms
+                </span>
+                <span className="px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-sm border border-green-500/30 font-normal">
+                  Premium Location
+                </span>
+                <span className="px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-sm border border-green-500/30 font-normal">
+                  Electronic Gating
+                </span>
+                <span className="px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-sm border border-green-500/30 font-normal">
+                  Private Community
+                </span>
               </div>
             </div>
           </motion.div>
 
           {/* Stacked Cards */}
-          <motion.div variants={itemVariants} className="lg:col-span-5 space-y-6">
+          <motion.div
+            variants={itemVariants}
+            className="lg:col-span-5 space-y-6"
+          >
             <div className="bg-black/40 rounded-2xl p-8 border border-green-500/10 hover:border-green-500/30 transition-all backdrop-blur group">
-              <h3 className="text-xl text-white mb-3 font-normal">Exclusive Events</h3>
+              <h3 className="text-xl text-white mb-3 font-normal">
+                Exclusive Events
+              </h3>
               <p className="text-gray-300 font-normal">
-                Yacht parties, epic club nights, and exclusive crypto travel events, this isn’t just a villa, it’s a year-long experience of a lifetime.
+                Yacht parties, epic club nights, and exclusive crypto travel
+                events, this isn’t just a villa, it’s a year-long experience of
+                a lifetime.
               </p>
             </div>
-            
+
             <div className="bg-black/40 rounded-2xl p-8 border border-green-500/10 hover:border-green-500/30 transition-all backdrop-blur group">
-              <h3 className="text-xl text-white mb-3 font-normal">Global Community</h3>
+              <h3 className="text-xl text-white mb-3 font-normal">
+                Global Community
+              </h3>
               <p className="text-gray-300 font-normal">
-                Hundreds of travel & crypto influencers are already on board… are you ready to join the movement?
+                Hundreds of travel & crypto influencers are already on board…
+                are you ready to join the movement?
               </p>
             </div>
           </motion.div>
@@ -148,13 +173,12 @@ export default function LuxuryVillaCollab() {
           <div className="bg-black/40 rounded-3xl p-8 border border-green-500/10 backdrop-blur">
             <div className="">
               <h1 className="xl:text-3xl text-xl text-center">
-                Hold $NOMAD → Unlock access to luxury travel, unforgettable events, and a community that spans the globe.
+                Hold $NOMAD → Unlock access to luxury travel, unforgettable
+                events, and a community that spans the globe.
               </h1>
             </div>
           </div>
         </motion.div>
-
-        
       </motion.div>
     </section>
   );
