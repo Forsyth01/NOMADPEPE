@@ -112,7 +112,7 @@ export default function LuxuryVillaCollab() {
               <div>
                 <h3 className="text-3xl text-white mb-4 font-normal">Your Luxury Villa Awaits</h3>
                 <p className="text-gray-300 leading-relaxed text-lg font-normal mb-6">
-                  We secured a luxury villa for an entire year. Stay for FREE when you hold $NOMAD. Wake up to ocean views, host your friends, or work remotely in paradise.
+                  We just secured a luxury villa for 1 whole year… and yes, you can stay here for FREE if you’re a $NOMAD holder. (T&Cs apply) must have minimum holding.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3">
@@ -131,7 +131,7 @@ export default function LuxuryVillaCollab() {
             <div className="bg-black/40 rounded-2xl p-8 border border-green-500/10 hover:border-green-500/30 transition-all backdrop-blur group">
               <h3 className="text-xl text-white mb-3 font-normal">Exclusive Events</h3>
               <p className="text-gray-300 font-normal">
-                Yacht parties, epic club nights, and crypto travel events with influencers.
+                Yacht parties, epic club nights, and exclusive crypto travel events, this isn’t just a villa, it’s a year-long experience of a lifetime.
               </p>
             </div>
             
