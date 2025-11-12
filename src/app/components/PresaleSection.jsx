@@ -45,7 +45,10 @@ export default function PresaleSection() {
       id="presale"
       ref={ref}
       className="relative py-20 px-6 md:px-12 lg:px-20 overflow-hidden"
-      style={{ backgroundColor: "#0a0f0a" }}
+      style={{   background: `linear-gradient(rgba(69,102,49,0.9), rgba(69,102,49,0.8)), url('/bg 4.png') center/cover no-repeat`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",}}
     >
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
