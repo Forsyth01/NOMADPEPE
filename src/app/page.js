@@ -21,6 +21,8 @@ import VideoPlayer from './components/VideoPlayer';
 import NomadJourney from './components/TheNomadJourney';
 import SixMonthsJourney from './components/SixMonthsJourney';
 import TappedInCollab from './components/TappedInCollab';
+import LuxuryVillaCollab from './components/LuxuryVillaCollab';
+import PresaleSection from './components/PresaleSection';
 
 export default function Home() {
   useEffect(() => {
@@ -57,10 +59,12 @@ export default function Home() {
       <VideoPlayer/>
       {/* <BuyUsingJupiter/> */}
       <Nomadnomics />
+      <PresaleSection/>
       <ExpeditionSection/>
       <NomadJourney/>
       <SixMonthsJourney/>
       <TappedInCollab/>
+      <LuxuryVillaCollab/>
       <FaqSection/>
       <NomadBadge/>
       {/* <ParallaxSection /> */}
