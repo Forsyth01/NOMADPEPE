@@ -64,7 +64,7 @@ export default function Hero() {
                 <div className="">
                   {/* Tagline */}
                   <p className="lucky pt-2 lg:pt-0 text-lg text-center sm:text-2xl md:text-3xl lg:text-3xl xl:text-[35px] rotate-[-2deg]">
-                    Hop On. Explore the Chain.
+                    Freedom has a currency.
                   </p>
                 </div>
 
