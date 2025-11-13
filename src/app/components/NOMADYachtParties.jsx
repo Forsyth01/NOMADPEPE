@@ -145,20 +145,16 @@ export default function NomadYachtParties() {
             className="lg:col-span-5 space-y-6"
           >
             <div className="bg-black/40 rounded-2xl p-8 border border-green-500/10 hover:border-green-500/30 transition-all backdrop-blur group">
-              <h3 className="text-xl text-white mb-3 font-normal">
-                Network with Explorers
-              </h3>
+          
               <p className="text-gray-300 font-normal">
-                These gatherings aren't just parties; they're opportunities to connect with like-minded explorers, collaborate on new ventures, and celebrate the nomadic lifestyle.
+                These gatherings aren't just parties; they're opportunities to connect with like-minded explorers, collaborate on new ventures, and celebrate the nomadic lifestyle surrounded by crystal-clear waters and incredible energy.
               </p>
             </div>
 
             <div className="bg-black/40 rounded-2xl p-8 border border-green-500/10 hover:border-green-500/30 transition-all backdrop-blur group">
-              <h3 className="text-xl text-white mb-3 font-normal">
-                For Digital Nomads
-              </h3>
+          
               <p className="text-gray-300 font-normal">
-                Whether you're a content creator, startup founder, investor, or someone living life on their own terms, these parties are your invitation to the world's most vibrant travel network.
+             Whether you’re a content creator, startup founder, investor, or someone living life on their own terms, the NOMAD Yacht Parties are your invitation to the world’s most vibrant travel network.
               </p>
             </div>
           </motion.div>
