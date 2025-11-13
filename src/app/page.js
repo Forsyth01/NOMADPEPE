@@ -23,6 +23,7 @@ import SixMonthsJourney from './components/SixMonthsJourney';
 import TappedInCollab from './components/TappedInCollab';
 import LuxuryVillaCollab from './components/LuxuryVillaCollab';
 import PresaleSection from './components/PresaleSection';
+import NomadYachtParties from './components/NOMADYachtParties';
 
 export default function Home() {
   useEffect(() => {
@@ -65,6 +66,7 @@ export default function Home() {
       <SixMonthsJourney/>
       <LuxuryVillaCollab/>
       <TappedInCollab/>
+      <NomadYachtParties/>
       <FaqSection/>
       <NomadBadge/>
       {/* <ParallaxSection /> */}
