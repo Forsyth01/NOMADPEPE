@@ -12,13 +12,13 @@ const geistMono = Geist_Mono({
 });
 
 // ──────────────────────────────────────────────────────────────
-// 1. ABSOLUTE IMAGE URL (critical for all crawlers)
+// ABSOLUTE IMAGE URL (with cache-buster for testing)
 // ──────────────────────────────────────────────────────────────
 const SITE_URL = "https://www.nomadpepe.xyz";
-const OG_IMAGE = `${SITE_URL}/nomad-logo.png`; // Must be 1200×630 PNG
+const OG_IMAGE = `${SITE_URL}/nomad-logo.png`; // Ensure <300KB, 1200x630 JPG/PNG
 
 // ──────────────────────────────────────────────────────────────
-// 2. Next.js Metadata Export
+// Next.js Metadata (SSR-safe)
 // ──────────────────────────────────────────────────────────────
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -40,6 +40,7 @@ export const metadata = {
         width: 1200,
         height: 630,
         alt: "NOMAD PEPE - Traveling Frog Meme Coin",
+        type: "image/png",  // Add explicit type for mobile crawlers
       },
     ],
     locale: "en_US",
@@ -62,8 +63,12 @@ export const metadata = {
   },
 };
 
+// Force static generation for crawlers (add this export)
+export const revalidate = 0;  // Revalidate on every request (or 3600 for 1h cache)
+export const dynamic = 'force-static';  // Ensure SSR/static for meta tags
+
 // ──────────────────────────────────────────────────────────────
-// 3. Root Layout (JavaScript – no TypeScript)
+// Root Layout with Fallback Meta (doubles down for mobile)
 // ──────────────────────────────────────────────────────────────
 export default function RootLayout({ children }) {
   return (
@@ -82,7 +87,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href={OG_IMAGE} />
         <link rel="apple-touch-icon" href={OG_IMAGE} />
 
-        {/* Fallback Open Graph Tags */}
+        {/* Enhanced Fallback OG (with type/secure_url for strict mobile crawlers) */}
         <meta property="og:title" content="NOMAD PEPE - The Traveling Frog Meme Coin" />
         <meta
           property="og:description"
@@ -91,13 +96,15 @@ export default function RootLayout({ children }) {
         <meta property="og:url" content={SITE_URL} />
         <meta property="og:site_name" content="NOMAD PEPE" />
         <meta property="og:image" content={OG_IMAGE} />
+        <meta property="og:image:secure_url" content={OG_IMAGE} />  {/* HTTPS fallback */}
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/png" />  {/* Explicit for WhatsApp/X mobile */}
         <meta property="og:image:alt" content="NOMAD PEPE - Traveling Frog Meme Coin" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
 
-        {/* Fallback Twitter Card */}
+        {/* Enhanced Fallback Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="NOMAD PEPE - The Traveling Frog Meme Coin" />
         <meta
