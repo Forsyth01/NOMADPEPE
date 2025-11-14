@@ -25,7 +25,7 @@ export const metadata = {
   title: "NOMAD PEPE - The Traveling Frog Meme Coin",
   description:
     "Join NOMAD PEPE on his epic journey across the crypto universe! The most based traveling frog in the meme coin space.",
-  
+
   openGraph: {
     title: "NOMAD PEPE - The Traveling Frog Meme Coin",
     description:
