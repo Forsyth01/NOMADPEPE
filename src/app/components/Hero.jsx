@@ -52,7 +52,7 @@ export default function Hero() {
                 {/* Logo */}
                 <div className="flex justify-center lg:justify-start">
                   <Image
-                    src="/assets/logo.png"
+                    src="/assets/NOMAD LOGO.png"
                     alt="Logo"
                     width={900}
                     height={300}
