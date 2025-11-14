@@ -13,9 +13,7 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const menuItems = ["About/Tokenomics", "About $Nomad", "Why $Nomad"];
-  
-  const mobileMenuItems = [
+  const menuItems = [
     { label: "About/Tokenomics", href: "#about/tokenomics" },
     { label: "About $Nomad", href: "#about $nomad" },
     { label: "Why $Nomad", href: "#why $nomad" },
@@ -50,22 +48,22 @@ export default function Navigation() {
   return (
     <div className="absolute z-100 w-full">
       <motion.nav
-        className={`w-full sm:w-[60%] md:w-[50%] lg:w-[50%] xl:w-[45%] 2xl:w-[40%] m-auto my-2 sm:my-3 md:my-4 z-50 transition-all duration-500 py-2 sm:py-3 rounded-lg md:rounded-xl md:border border-[#CCE697] ${
+        className={`w-full sm:w-[70%] md:w-[70%] lg:w-[65%] xl:w-[60%] 2xl:w-[60%] m-auto my-2 sm:my-3 md:my-4 z-50 transition-all duration-500 py-2 sm:py-3 rounded-lg md:rounded-xl md:border border-[#CCE697] ${
           scrolled ? "" : ""
         }`}
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 flex justify-between items-center">
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
+          <div className="hidden md:flex items-center space-x-2 lg:space-x-3 xl:space-x-4">
             {menuItems.map((item) => (
               <motion.a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.label}
+                href={item.href}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.97 }}
-                className="text-[#E5EED2] text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px] font-medium transition-colors whitespace-nowrap"
+                className="text-[#E5EED2] text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[15px] font-medium transition-colors whitespace-nowrap"
               >
-                {item}
+                {item.label}
               </motion.a>
             ))}
           </div>
@@ -75,10 +73,10 @@ export default function Navigation() {
             href="#howtobuy"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
-            className="relative hidden md:inline-block font-bold text-[#0F1C0F] text-[14px] lg:text-[16px] xl:text-lg uppercase tracking-wide"
+            className="relative hidden md:inline-block font-bold text-[#0F1C0F] text-[12px] lg:text-[13px] xl:text-[14px] uppercase tracking-wide"
           >
-            <span className="absolute inset-0 bg-[#58731f] rounded-md translate-x-[3px] lg:translate-x-[4px] translate-y-[3px] lg:translate-y-[4px]"></span>
-            <span className="relative bg-[#99CC33] rounded-md border border-[#0F1C0F] px-4 lg:px-5 xl:px-6 py-1.5 lg:py-2 inline-block text-sm lg:text-base">
+            <span className="absolute inset-0 bg-[#58731f] rounded-md translate-x-[3px] translate-y-[3px]"></span>
+            <span className="relative bg-[#99CC33] rounded-md border border-[#0F1C0F] px-3 lg:px-4 xl:px-5 py-1.5 inline-block">
               BUY $NOMAD
             </span>
           </motion.a>
@@ -150,7 +148,7 @@ export default function Navigation() {
 
                 {/* Menu Items */}
                 <div className="flex-1 overflow-y-auto py-2 px-4 space-y-2">
-                  {mobileMenuItems.map((item, index) => (
+                  {menuItems.map((item, index) => (
                     <motion.a
                       key={item.label}
                       href={item.href}
